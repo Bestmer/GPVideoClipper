@@ -61,7 +61,7 @@ GPVideoClipperController *controller = [GPVideoClipperController clipperWithVide
     maker.clippedVideoMinDuration = 3.0;
     maker.clippedVideoMaxDuration = 15.0f;
 } callback:^(NSURL * _Nonnull videoURL, PHAsset * _Nonnull videoAsset, UIImage * _Nonnull coverImage) {
-  // 处理裁剪后的videoURL，videoAsset，coverImage
+  // handle videoURL，videoAsset，coverImage
     NSLog(@"videoURL:%@ \n videoAsset:%@ \n coverImage:%@",videoURL, videoAsset, coverImage);
 }];
 
