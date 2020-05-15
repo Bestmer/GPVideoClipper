@@ -36,7 +36,15 @@ pod 'GPVideoClipper'
 2. then `pod install` or `pod update`。
 3. import `<GPVideoClipper.h>`。
 
-if you can't search this repository，do`pod repo update`，or `rm ~/Library/Caches/CocoaPods/search_index.json` or update CocoaPods version.
+if you can't search this repository，try update CocoaPods version or 
+
+1.`pod cache clean --all`
+
+2.`rm -rf ~/Library/Caches/CocoaPods` 
+
+3.`pod repo update`
+
+
 
 ## Manuel
 
@@ -102,7 +110,13 @@ pod 'GPVideoClipper'
 2. 执行 `pod install` 或 `pod update`。
 3. 导入 `<GPVideoClipper.h>`。
 
-若搜索不到库，可执行`pod repo update`，或使用 `rm ~/Library/Caches/CocoaPods/search_index.json` 移除本地索引然后再执行安装，或更新一下 CocoaPods 版本。
+如果搜不到这个库，试着更新CocoaPods版本或者执行下面的操作：
+
+1.`pod cache clean --all`
+
+2.`rm -rf ~/Library/Caches/CocoaPods` 
+
+3.`pod repo update`
 
 ## 手动导入
 
