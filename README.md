@@ -2,7 +2,7 @@
 
 [![CocoaPods](https://img.shields.io/badge/pod-1.0.0-blue)](https://cocoapods.org/pods/GPVideoClipper)&nbsp;
 [![CocoaPods](https://img.shields.io/badge/plaform-iOS9.0+-brightgreen)](https://github.com/Bestmer/GPVideoClipper)&nbsp;
-[![License](https://img.shields.io/bad8ge/License-MIT-red)](https://github.com/Bestmer/GPVideoClipper)&nbsp;
+[![License](https://img.shields.io/badge/License-MIT-red)](https://github.com/Bestmer/GPVideoClipper)&nbsp;
  
 **iOS long video clip tool, similar to WeChat moments select and edit videos larger than 15s from albums, and support saving as a local album.**
 
