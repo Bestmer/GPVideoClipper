@@ -20,10 +20,12 @@ static CGFloat kClipViewHeight = 135;
 
 @property (nonatomic, strong) GPVideoPlayerView *playerView;
 @property (nonatomic, strong) GPVideoClipperView *clipperView;
-@property (nonatomic, strong) GPVideoConfigMaker *maker;
 @property (nonatomic, strong) id timeObserver;
 @property (nonatomic, strong) UIImage *coverImage;
 @property (nonatomic, strong) PHFetchResult *collectonResuts;
+@property (nonatomic, strong) NSURL *videoURL;
+@property (nonatomic, strong) GPVideoConfigMaker *maker;
+@property (nonatomic, copy) ClipperCallback callback;
 
 @end
 
@@ -44,6 +46,24 @@ static CGFloat kClipViewHeight = 135;
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+#pragma mark - Public
+
++ (instancetype)clipperWithVideoURL:(NSURL *)videoURL
+                              maker:(void (^__nullable)(GPVideoConfigMaker *maker))makerBlock
+                           callback:(ClipperCallback)callback{
+    GPVideoConfigMaker *maker = GPVideoConfigMaker.new;
+    if (makerBlock) {
+        makerBlock(maker);
+    }
+    maker.sourceVideoTotalDuration = CMTimeGetSeconds([AVURLAsset assetWithURL:videoURL].duration);
+    
+    GPVideoClipperController *controller = GPVideoClipperController.new;
+    controller.videoURL = videoURL;
+    controller.maker = maker;
+    controller.callback = callback;
+    return controller;
 }
 
 #pragma mark - Private
@@ -244,8 +264,13 @@ static CGFloat kClipViewHeight = 135;
 
 - (GPVideoPlayerView *)playerView {
     if (!_playerView) {
-        CGFloat statusBarHeight = [[UIApplication sharedApplication] windows].firstObject.windowScene.statusBarManager.statusBarFrame.size.height;;
-        _playerView = [[GPVideoPlayerView alloc] initWithFrame:CGRectMake(30, statusBarHeight + 44, self.view.frame.size.width - 60, self.view.frame.size.height - statusBarHeight - 44 - kClipViewHeight - [self gp_safeAreaBottomHeight] - 25) videoURL:self.videoURL];
+        if (@available(iOS 13.0, *)) {
+            CGFloat statusBarHeight = [[UIApplication sharedApplication] windows].firstObject.windowScene.statusBarManager.statusBarFrame.size.height;;
+            _playerView = [[GPVideoPlayerView alloc] initWithFrame:CGRectMake(30, statusBarHeight + 44, self.view.frame.size.width - 60, self.view.frame.size.height - statusBarHeight - 44 - kClipViewHeight - [self gp_safeAreaBottomHeight] - 25) videoURL:self.videoURL];
+        } else {
+            CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+            _playerView = [[GPVideoPlayerView alloc] initWithFrame:CGRectMake(30, statusBarHeight + 44, self.view.frame.size.width - 60, self.view.frame.size.height - statusBarHeight - 44 - kClipViewHeight - [self gp_safeAreaBottomHeight] - 25) videoURL:self.videoURL];
+        }
         _playerView.delegate = self;
         _playerView.maker = self.maker;
     }
@@ -259,18 +284,6 @@ static CGFloat kClipViewHeight = 135;
         _clipperView.delegate = self;
     }
     return _clipperView;
-}
-
-- (GPVideoConfigMaker *)maker {
-    if (!_maker) {
-        _maker = [GPVideoConfigMaker new];
-        _maker.startTime = 0;
-        _maker.endTime = 15;
-        _maker.clippedVideoMinDuration = 3.0;
-        _maker.clippedVideoMaxDuration = 15.0f;
-        _maker.sourceVideoTotalDuration = CMTimeGetSeconds([AVURLAsset assetWithURL:self.videoURL].duration);
-    }
-    return _maker;
 }
 
 @end

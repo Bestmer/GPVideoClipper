@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
+#import "GPVideoConfigMaker.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^ClipperCallback)(NSURL *videoURL, PHAsset *videoAsset, UIImage *coverImage);
+
 @interface GPVideoClipperController : UIViewController
 
-@property (nonatomic, strong) NSURL *videoURL;
-@property (nonatomic, copy) void(^callback)(NSURL *videoURL, PHAsset *videoAsset, UIImage *coverImage);
++ (instancetype)clipperWithVideoURL:(NSURL *)videoURL
+                             maker:(void (^__nullable)(GPVideoConfigMaker *maker))makerBlock
+                           callback:(ClipperCallback)callback;
 
 @end
 

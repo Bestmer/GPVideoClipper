@@ -13,18 +13,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GPVideoConfigMaker : NSObject
 
+#pragma mark - Required
 /** 开始时间 */
 @property (nonatomic, assign) CGFloat startTime;
 /** 结束时间 */
 @property (nonatomic, assign) CGFloat endTime;
-/** 源视频总时长 */
-@property (nonatomic, assign) CGFloat sourceVideoTotalDuration;
 /** 裁剪后视频的最小时长 */
 @property (nonatomic, assign) CGFloat clippedVideoMinDuration;
 /** 裁剪后视频的最长时长 */
 @property (nonatomic, assign) CGFloat clippedVideoMaxDuration;
+/** 源视频总时长（框架内部进行计算,使用者不需要关心） */
+@property (nonatomic, assign) CGFloat sourceVideoTotalDuration;
 
-#pragma mark - UI相关
+#pragma mark - Optional
 /** 是否隐藏已选择时间标签 */
 @property (nonatomic, assign) BOOL isHiddenSelectedTimeTag;
 /** 选择框颜色 */

@@ -76,10 +76,14 @@
     [picker dismissViewControllerAnimated:YES completion:^{
 
     }];
-    GPVideoClipperController *controller = GPVideoClipperController.new;
-    controller.videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
-    [controller setCallback:^(NSURL * _Nonnull videoURL, PHAsset * _Nonnull videoAsset, UIImage * _Nonnull coverImage) {
-        // 处理裁剪后的videoURL，videoAsset，视频封面
+    
+    GPVideoClipperController *controller = [GPVideoClipperController clipperWithVideoURL:[info objectForKey:UIImagePickerControllerMediaURL] maker:^(GPVideoConfigMaker * _Nonnull maker) {
+        maker.startTime = 0;
+        maker.endTime = 15;
+        maker.clippedVideoMinDuration = 3.0;
+        maker.clippedVideoMaxDuration = 15.0f;
+    } callback:^(NSURL * _Nonnull videoURL, PHAsset * _Nonnull videoAsset, UIImage * _Nonnull coverImage) {
+      // 处理裁剪后的videoURL，videoAsset，视频封面
         NSLog(@"videoURL:%@ \n videoAsset:%@ \n coverImage:%@",videoURL, videoAsset, coverImage);
     
         UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:@"视频保存成功，请前往相册中查看!" preferredStyle:UIAlertControllerStyleAlert];
@@ -88,8 +92,8 @@
         }];
         [controller addAction:doneAction];
         [self presentViewController:controller animated:YES completion:nil];
-        
     }];
+
     [self.navigationController pushViewController:controller animated:NO];
 }
 
