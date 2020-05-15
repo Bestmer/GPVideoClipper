@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E0470CCD246B9BBA00609FB9 /* GPVideoClipperController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F24128246B9AFF00FD6D6E /* GPVideoClipperController.m */; };
+		E0B4AE00246E23C100C4E128 /* GPVideoClipperController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B4ADFA246E23C100C4E128 /* GPVideoClipperController.m */; };
+		E0B4AE01246E23C100C4E128 /* GPVideoConfigMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B4ADFB246E23C100C4E128 /* GPVideoConfigMaker.m */; };
+		E0B4AE02246E23C100C4E128 /* GPVideoClipperView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B4ADFC246E23C100C4E128 /* GPVideoClipperView.m */; };
+		E0B4AE03246E23C100C4E128 /* GPVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B4ADFD246E23C100C4E128 /* GPVideoPlayerView.m */; };
 		E0F240F2246B9AEB00FD6D6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F240F1246B9AEB00FD6D6E /* AppDelegate.m */; };
 		E0F240F5246B9AEB00FD6D6E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F240F4246B9AEB00FD6D6E /* SceneDelegate.m */; };
 		E0F240F8246B9AEB00FD6D6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F240F7246B9AEB00FD6D6E /* ViewController.m */; };
@@ -15,11 +18,6 @@
 		E0F240FD246B9AEE00FD6D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0F240FC246B9AEE00FD6D6E /* Assets.xcassets */; };
 		E0F24100246B9AEE00FD6D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F240FE246B9AEE00FD6D6E /* LaunchScreen.storyboard */; };
 		E0F24103246B9AEE00FD6D6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F24102246B9AEE00FD6D6E /* main.m */; };
-		E0F2410D246B9AEF00FD6D6E /* GPVideoClipperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F2410C246B9AEF00FD6D6E /* GPVideoClipperDemoTests.m */; };
-		E0F24118246B9AEF00FD6D6E /* GPVideoClipperDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F24117246B9AEF00FD6D6E /* GPVideoClipperDemoUITests.m */; };
-		E0F2412F246B9AFF00FD6D6E /* GPVideoConfigMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F24129246B9AFF00FD6D6E /* GPVideoConfigMaker.m */; };
-		E0F24130246B9AFF00FD6D6E /* GPVideoClipperView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F2412A246B9AFF00FD6D6E /* GPVideoClipperView.m */; };
-		E0F24131246B9AFF00FD6D6E /* GPVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F2412B246B9AFF00FD6D6E /* GPVideoPlayerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0B4ADF8246E23C100C4E128 /* GPVideoClipperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVideoClipperView.h; sourceTree = "<group>"; };
+		E0B4ADF9246E23C100C4E128 /* GPVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVideoPlayerView.h; sourceTree = "<group>"; };
+		E0B4ADFA246E23C100C4E128 /* GPVideoClipperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVideoClipperController.m; sourceTree = "<group>"; };
+		E0B4ADFB246E23C100C4E128 /* GPVideoConfigMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVideoConfigMaker.m; sourceTree = "<group>"; };
+		E0B4ADFC246E23C100C4E128 /* GPVideoClipperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVideoClipperView.m; sourceTree = "<group>"; };
+		E0B4ADFD246E23C100C4E128 /* GPVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVideoPlayerView.m; sourceTree = "<group>"; };
+		E0B4ADFE246E23C100C4E128 /* GPVideoConfigMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVideoConfigMaker.h; sourceTree = "<group>"; };
+		E0B4ADFF246E23C100C4E128 /* GPVideoClipperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVideoClipperController.h; sourceTree = "<group>"; };
 		E0F240ED246B9AEB00FD6D6E /* GPVideoClipperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPVideoClipperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F240F0246B9AEB00FD6D6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E0F240F1246B9AEB00FD6D6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,19 +59,7 @@
 		E0F24101246B9AEE00FD6D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0F24102246B9AEE00FD6D6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0F24108246B9AEF00FD6D6E /* GPVideoClipperDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPVideoClipperDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0F2410C246B9AEF00FD6D6E /* GPVideoClipperDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPVideoClipperDemoTests.m; sourceTree = "<group>"; };
-		E0F2410E246B9AEF00FD6D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0F24113246B9AEF00FD6D6E /* GPVideoClipperDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPVideoClipperDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0F24117246B9AEF00FD6D6E /* GPVideoClipperDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPVideoClipperDemoUITests.m; sourceTree = "<group>"; };
-		E0F24119246B9AEF00FD6D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0F24126246B9AFF00FD6D6E /* GPVideoClipperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVideoClipperView.h; sourceTree = "<group>"; };
-		E0F24127246B9AFF00FD6D6E /* GPVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVideoPlayerView.h; sourceTree = "<group>"; };
-		E0F24128246B9AFF00FD6D6E /* GPVideoClipperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVideoClipperController.m; sourceTree = "<group>"; };
-		E0F24129246B9AFF00FD6D6E /* GPVideoConfigMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVideoConfigMaker.m; sourceTree = "<group>"; };
-		E0F2412A246B9AFF00FD6D6E /* GPVideoClipperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVideoClipperView.m; sourceTree = "<group>"; };
-		E0F2412B246B9AFF00FD6D6E /* GPVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVideoPlayerView.m; sourceTree = "<group>"; };
-		E0F2412C246B9AFF00FD6D6E /* GPVideoConfigMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVideoConfigMaker.h; sourceTree = "<group>"; };
-		E0F2412D246B9AFF00FD6D6E /* GPVideoClipperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVideoClipperController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,12 +87,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0B4ADF7246E23C100C4E128 /* GPVideoClipper */ = {
+			isa = PBXGroup;
+			children = (
+				E0B4ADFE246E23C100C4E128 /* GPVideoConfigMaker.h */,
+				E0B4ADFB246E23C100C4E128 /* GPVideoConfigMaker.m */,
+				E0B4ADF9246E23C100C4E128 /* GPVideoPlayerView.h */,
+				E0B4ADFD246E23C100C4E128 /* GPVideoPlayerView.m */,
+				E0B4ADF8246E23C100C4E128 /* GPVideoClipperView.h */,
+				E0B4ADFC246E23C100C4E128 /* GPVideoClipperView.m */,
+				E0B4ADFF246E23C100C4E128 /* GPVideoClipperController.h */,
+				E0B4ADFA246E23C100C4E128 /* GPVideoClipperController.m */,
+			);
+			path = GPVideoClipper;
+			sourceTree = SOURCE_ROOT;
+		};
 		E0F240E4246B9AEB00FD6D6E = {
 			isa = PBXGroup;
 			children = (
 				E0F240EF246B9AEB00FD6D6E /* GPVideoClipperDemo */,
-				E0F2410B246B9AEF00FD6D6E /* GPVideoClipperDemoTests */,
-				E0F24116246B9AEF00FD6D6E /* GPVideoClipperDemoUITests */,
 				E0F240EE246B9AEB00FD6D6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,7 +123,7 @@
 		E0F240EF246B9AEB00FD6D6E /* GPVideoClipperDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E0F24125246B9AFF00FD6D6E /* GPVideoClipper */,
+				E0B4ADF7246E23C100C4E128 /* GPVideoClipper */,
 				E0F240F0246B9AEB00FD6D6E /* AppDelegate.h */,
 				E0F240F1246B9AEB00FD6D6E /* AppDelegate.m */,
 				E0F240F3246B9AEB00FD6D6E /* SceneDelegate.h */,
@@ -130,39 +137,6 @@
 				E0F24102246B9AEE00FD6D6E /* main.m */,
 			);
 			path = GPVideoClipperDemo;
-			sourceTree = "<group>";
-		};
-		E0F2410B246B9AEF00FD6D6E /* GPVideoClipperDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				E0F2410C246B9AEF00FD6D6E /* GPVideoClipperDemoTests.m */,
-				E0F2410E246B9AEF00FD6D6E /* Info.plist */,
-			);
-			path = GPVideoClipperDemoTests;
-			sourceTree = "<group>";
-		};
-		E0F24116246B9AEF00FD6D6E /* GPVideoClipperDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E0F24117246B9AEF00FD6D6E /* GPVideoClipperDemoUITests.m */,
-				E0F24119246B9AEF00FD6D6E /* Info.plist */,
-			);
-			path = GPVideoClipperDemoUITests;
-			sourceTree = "<group>";
-		};
-		E0F24125246B9AFF00FD6D6E /* GPVideoClipper */ = {
-			isa = PBXGroup;
-			children = (
-				E0F2412C246B9AFF00FD6D6E /* GPVideoConfigMaker.h */,
-				E0F24129246B9AFF00FD6D6E /* GPVideoConfigMaker.m */,
-				E0F24127246B9AFF00FD6D6E /* GPVideoPlayerView.h */,
-				E0F2412B246B9AFF00FD6D6E /* GPVideoPlayerView.m */,
-				E0F24126246B9AFF00FD6D6E /* GPVideoClipperView.h */,
-				E0F2412A246B9AFF00FD6D6E /* GPVideoClipperView.m */,
-				E0F2412D246B9AFF00FD6D6E /* GPVideoClipperController.h */,
-				E0F24128246B9AFF00FD6D6E /* GPVideoClipperController.m */,
-			);
-			path = GPVideoClipper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,14 +269,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0470CCD246B9BBA00609FB9 /* GPVideoClipperController.m in Sources */,
 				E0F240F8246B9AEB00FD6D6E /* ViewController.m in Sources */,
 				E0F240F2246B9AEB00FD6D6E /* AppDelegate.m in Sources */,
 				E0F24103246B9AEE00FD6D6E /* main.m in Sources */,
-				E0F2412F246B9AFF00FD6D6E /* GPVideoConfigMaker.m in Sources */,
-				E0F24131246B9AFF00FD6D6E /* GPVideoPlayerView.m in Sources */,
-				E0F24130246B9AFF00FD6D6E /* GPVideoClipperView.m in Sources */,
+				E0B4AE01246E23C100C4E128 /* GPVideoConfigMaker.m in Sources */,
+				E0B4AE03246E23C100C4E128 /* GPVideoPlayerView.m in Sources */,
+				E0B4AE02246E23C100C4E128 /* GPVideoClipperView.m in Sources */,
 				E0F240F5246B9AEB00FD6D6E /* SceneDelegate.m in Sources */,
+				E0B4AE00246E23C100C4E128 /* GPVideoClipperController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0F2410D246B9AEF00FD6D6E /* GPVideoClipperDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0F24118246B9AEF00FD6D6E /* GPVideoClipperDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4LC6J3RT72;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GPVideoClipperDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -481,7 +453,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Roc.Kwok.GPVideoClipperDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -490,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4LC6J3RT72;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GPVideoClipperDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,7 +471,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Roc.Kwok.GPVideoClipperDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
