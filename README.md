@@ -1,7 +1,7 @@
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geqmdc0g5yj30r007gt96.jpg)
 
-[![CocoaPods](https://img.shields.io/badge/pod-1.0.0-blue)](https://cocoapods.org/pods/GPVideoClipper)&nbsp;
-[![CocoaPods](https://img.shields.io/badge/plaform-iOS9.0+-brightgreen)](https://github.com/Bestmer/GPVideoClipper)&nbsp;
+[![CocoaPods](https://img.shields.io/badge/pod-1.0.1-blue)](https://cocoapods.org/pods/GPVideoClipper)&nbsp;
+[![CocoaPods](https://img.shields.io/badge/plaform-iOS8.0+-brightgreen)](https://github.com/Bestmer/GPVideoClipper)&nbsp;
 [![License](https://img.shields.io/badge/License-MIT-red)](https://github.com/Bestmer/GPVideoClipper)&nbsp;
  
 **iOS long video clip tool, similar to WeChat moments select and edit videos larger than 15s from albums, and support saving as a local album.**
@@ -52,14 +52,19 @@ Download GPVideoClipper and drag all files to your project.
 
 # <span id="Usage">Usage</span>
 
-Init `GPVideoClipperController` and set videoURL,in callback handle new video info .
+Init `GPVideoClipperController` ,then set videoURL and maker,in callback handle new video info .
 
 ```
-GPVideoClipperController *controller = GPVideoClipperController.new;
-controller.videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
-[controller setCallback:^(NSURL * _Nonnull videoURL, PHAsset * _Nonnull videoAsset, UIImage * _Nonnull coverImage) {
-    // handle videoURL，videoAsset，coverImage
+GPVideoClipperController *controller = [GPVideoClipperController clipperWithVideoURL:[info objectForKey:UIImagePickerControllerMediaURL] maker:^(GPVideoConfigMaker * _Nonnull maker) {
+    maker.startTime = 0;
+    maker.endTime = 15;
+    maker.clippedVideoMinDuration = 3.0;
+    maker.clippedVideoMaxDuration = 15.0f;
+} callback:^(NSURL * _Nonnull videoURL, PHAsset * _Nonnull videoAsset, UIImage * _Nonnull coverImage) {
+  // 处理裁剪后的videoURL，videoAsset，视频封面
+    NSLog(@"videoURL:%@ \n videoAsset:%@ \n coverImage:%@",videoURL, videoAsset, coverImage);
 }];
+
 [self.navigationController pushViewController:controller animated:NO];
 ```
 # <span id="SwiftVersion">Swift Version</span>
@@ -69,8 +74,8 @@ Swift version comming soon.
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geqmdc0g5yj30r007gt96.jpg)
 
-[![CocoaPods](https://img.shields.io/badge/pod-1.0.0-blue)](https://cocoapods.org/pods/GPVideoClipper)&nbsp;
-[![CocoaPods](https://img.shields.io/badge/plaform-iOS9.0+-brightgreen)](https://github.com/Bestmer/GPVideoClipper)&nbsp;
+[![CocoaPods](https://img.shields.io/badge/pod-1.0.1-blue)](https://cocoapods.org/pods/GPVideoClipper)&nbsp;
+[![CocoaPods](https://img.shields.io/badge/plaform-iOS8.0+-brightgreen)](https://github.com/Bestmer/GPVideoClipper)&nbsp;
 [![License](https://img.shields.io/badge/License-MIT-red)](https://github.com/Bestmer/GPVideoClipper)&nbsp;
 
 ## 中文版本
@@ -125,15 +130,19 @@ pod 'GPVideoClipper'
 
 # 用法
 
-初始化`GPVideoClipperController`并且赋值videoURL，
-在回调中处理新的视频信息。
+初始化`GPVideoClipperController`,然后赋值videoURL和maker，最后在回调中处理新的视频信息。
 
 ```
-GPVideoClipperController *controller = GPVideoClipperController.new;
-controller.videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
-[controller setCallback:^(NSURL * _Nonnull videoURL, PHAsset * _Nonnull videoAsset, UIImage * _Nonnull coverImage) {
-    // 处理裁剪后的videoURL，videoAsset，视频封面
+GPVideoClipperController *controller = [GPVideoClipperController clipperWithVideoURL:[info objectForKey:UIImagePickerControllerMediaURL] maker:^(GPVideoConfigMaker * _Nonnull maker) {
+    maker.startTime = 0;
+    maker.endTime = 15;
+    maker.clippedVideoMinDuration = 3.0;
+    maker.clippedVideoMaxDuration = 15.0f;
+} callback:^(NSURL * _Nonnull videoURL, PHAsset * _Nonnull videoAsset, UIImage * _Nonnull coverImage) {
+  // 处理裁剪后的videoURL，videoAsset，视频封面
+    NSLog(@"videoURL:%@ \n videoAsset:%@ \n coverImage:%@",videoURL, videoAsset, coverImage);
 }];
+
 [self.navigationController pushViewController:controller animated:NO];
 ```
 # Swift版本
