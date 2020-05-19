@@ -68,7 +68,7 @@ GPVideoClipperController *controller = [GPVideoClipperController clipperWithVide
 [self.navigationController pushViewController:controller animated:NO];
 ```
 # <span id="SwiftVersion">Swift Version</span>
-Swift version comming soon.
+- [GPVideoClipper Swift Verison](https://github.com/Bestmer/GPVideoClipper-Swift)
 
 ---
 
@@ -90,7 +90,7 @@ Swift version comming soon.
 * [特性](#特性)
 * [安装](#安装)
 * [用法](#用法)
-* [Swift版本](#Swift版本)
+* [Swift版本](#Swift)
 
 
 # 预览
@@ -145,6 +145,5 @@ GPVideoClipperController *controller = [GPVideoClipperController clipperWithVide
 
 [self.navigationController pushViewController:controller animated:NO];
 ```
-# Swift版本
-
-Swift版本即将更新，敬请期待。
+# <span id="Swift">Swift版本</span>
+- [GPVideoClipper Swift Verison](https://github.com/Bestmer/GPVideoClipper-Swift)
